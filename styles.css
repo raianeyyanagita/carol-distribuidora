@@ -1,6 +1,6 @@
 /* ==========================================================================
    Carol Distribuidora — Design System Autoral, Rústico & Sofisticado
-   100% Responsivo: Mobile First, Tablet & Desktop
+   100% Responsivo: Mobile First, Tablet & Desktop (Sem sobreposições)
    ========================================================================== */
 
 :root {
@@ -131,7 +131,7 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   HEADER RESPONSIVO
+   HEADER RESPONSIVO (CORRIGIDO PARA NUNCA INVADIR ESPAÇO)
    ========================================================================== */
 .header {
   position: sticky;
@@ -153,19 +153,21 @@ button, input, select, textarea {
   align-items: center;
   justify-content: space-between;
   height: 84px;
-  gap: 16px;
+  gap: 12px;
 }
 
+/* Identidade visual com flex-shrink para respeitar o botão */
 .brand-identity {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-width: 0;
+  flex: 1 1 auto;
 }
 
 .brand-monogram {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
   background: linear-gradient(145deg, #2A1E17, #18120E);
   border: 1px solid rgba(184, 83, 36, 0.45);
@@ -174,7 +176,7 @@ button, input, select, textarea {
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #FFF;
   flex-shrink: 0;
@@ -188,6 +190,7 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  overflow: hidden;
 }
 
 .brand-main-name {
@@ -198,6 +201,8 @@ button, input, select, textarea {
   line-height: 1.1;
   color: var(--color-brand-dark);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brand-main-name span {
@@ -208,7 +213,7 @@ button, input, select, textarea {
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
   margin-top: 2px;
   white-space: nowrap;
@@ -238,22 +243,23 @@ button, input, select, textarea {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-shrink: 0;
 }
 
 .btn-quote-cart {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
   background: transparent;
   border: 1px solid var(--border-light);
-  padding: 8px 14px;
+  padding: 7px 12px;
   border-radius: var(--radius-pill);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--text-primary);
   cursor: pointer;
+  white-space: nowrap;
   transition: var(--transition);
 }
 
@@ -267,8 +273,8 @@ button, input, select, textarea {
   color: #fff;
   font-size: 0.72rem;
   font-weight: 700;
-  min-width: 20px;
-  height: 20px;
+  min-width: 18px;
+  height: 18px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -282,12 +288,13 @@ button, input, select, textarea {
   gap: 7px;
   background: var(--color-brand-copper);
   color: #fff;
-  padding: 9px 16px;
+  padding: 8px 15px;
   border-radius: var(--radius-pill);
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   font-weight: 600;
   cursor: pointer;
   border: none;
+  white-space: nowrap;
   transition: var(--transition);
 }
 
@@ -301,10 +308,11 @@ button, input, select, textarea {
   background: none;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
-  padding: 8px;
+  padding: 7px;
   cursor: pointer;
   color: var(--text-primary);
   line-height: 0;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
@@ -1167,7 +1175,7 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   MEDIA QUERIES — RESPONSIVIDADE COMPLETA
+   MEDIA QUERIES — RESPONSIVIDADE COMPLETA E CORREÇÃO DO HEADER
    ========================================================================== */
 
 /* Tablets e Telas Médias (<= 992px) */
@@ -1195,59 +1203,84 @@ button, input, select, textarea {
 
 /* Celulares e Smartphones (<= 768px) */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 14px;
+  }
+
   .topbar {
-    font-size: 0.75rem;
-    padding: 6px 0;
+    font-size: 0.72rem;
+    padding: 5px 0;
   }
 
   .topbar-info {
-    display: none; /* Esconde texto longo no mobile para não quebrar a tela */
+    display: none;
   }
 
   .topbar-inner {
     justify-content: center;
   }
 
+  /* Header com espaço calculado e sem sobreposição */
   .nav-inner {
-    height: 72px;
+    height: 68px;
+    gap: 8px;
+  }
+
+  .brand-identity {
+    gap: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .brand-monogram {
-    width: 38px;
-    height: 38px;
-    font-size: 1.25rem;
-    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+    border-radius: 7px;
   }
 
   .brand-main-name {
-    font-size: 1.15rem;
+    font-size: 1.02rem;
+    letter-spacing: -0.01em;
   }
 
   .brand-subtext {
-    font-size: 0.62rem;
+    display: none; /* Esconde a linha menor "PANELAS • ALUMÍNIOS..." no celular para despoluir e não apertar */
   }
 
-  /* Oculta botão de WhatsApp do header no mobile para dar espaço ao menu */
+  /* Ações do header no mobile */
+  .nav-actions {
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
   .btn-header-wa {
     display: none;
   }
 
   .btn-quote-cart {
-    padding: 7px 11px;
-    font-size: 0.8rem;
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    gap: 5px;
   }
 
-  /* Menu Hamburguer Ativo */
+  .quote-badge {
+    min-width: 17px;
+    height: 17px;
+    font-size: 0.68rem;
+  }
+
   .mobile-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 6px;
   }
 
   .nav-links {
     display: none;
     position: absolute;
-    top: 72px;
+    top: 68px;
     left: 0;
     right: 0;
     background: #FFF;
@@ -1255,7 +1288,7 @@ button, input, select, textarea {
     padding: 16px 20px;
     border-bottom: 2px solid var(--border-light);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    gap: 14px;
+    gap: 12px;
     text-align: center;
   }
 
@@ -1264,40 +1297,45 @@ button, input, select, textarea {
   }
 
   .nav-links a {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding: 8px 0;
     width: 100%;
     border-bottom: 1px solid var(--border-light);
   }
 
   .hero {
-    padding: 36px 0 48px;
+    padding: 30px 0 42px;
   }
 
   .hero-headline {
-    font-size: 1.85rem;
+    font-size: 1.7rem;
     line-height: 1.2;
+    margin-bottom: 14px;
   }
 
   .hero-description {
-    font-size: 0.95rem;
-    margin-bottom: 22px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
   }
 
   .hero-ctas {
     flex-direction: column;
     width: 100%;
     gap: 10px;
+    margin-bottom: 28px;
   }
 
   .hero-ctas .btn-primary,
   .hero-ctas .btn-secondary {
     width: 100%;
+    padding: 12px 18px;
   }
 
   .hero-badges-row {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
+    padding-top: 18px;
   }
 
   .badge-item {
@@ -1307,30 +1345,31 @@ button, input, select, textarea {
   }
 
   .badge-item strong {
-    font-size: 1.15rem;
-    min-width: 80px;
+    font-size: 1.1rem;
+    min-width: 70px;
   }
 
   .brand-strip-inner {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   .section {
-    padding: 54px 0;
+    padding: 48px 0;
   }
 
   .section-header {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
 
   .showcase-grid {
-    grid-template-columns: 1fr; /* 1 card por linha no celular */
+    grid-template-columns: 1fr;
   }
 
   .catalog-toolbar {
     flex-direction: column;
     align-items: stretch;
+    gap: 12px;
   }
 
   .filter-list {
@@ -1342,7 +1381,7 @@ button, input, select, textarea {
   }
 
   .catalog-grid {
-    grid-template-columns: 1fr; /* 1 produto por linha no celular */
+    grid-template-columns: 1fr;
   }
 
   .trust-credentials-grid {
@@ -1350,24 +1389,24 @@ button, input, select, textarea {
   }
 
   .contact-card {
-    padding: 22px;
+    padding: 20px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 26px;
+    gap: 24px;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 8px;
   }
 
-  /* Botão WhatsApp flutuante compacto e sem atrapalhar */
   .wa-float-pill {
     bottom: 16px;
     right: 16px;
-    padding: 10px 14px;
+    padding: 9px 14px;
     font-size: 0.78rem;
   }
 }
