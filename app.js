@@ -6,8 +6,8 @@
 const WHATSAPP_NUMBER = '5537988528261';
 const INSTAGRAM_URL = 'https://www.instagram.com/caroldistribuidora_oficial';
 
-const STORAGE_PRODUCTS_KEY = 'carol_catalog_products_v7';
-const STORAGE_HERO_KEY = 'carol_hero_photo_v7';
+const STORAGE_PRODUCTS_KEY = 'carol_catalog_products_v8';
+const STORAGE_HERO_KEY = 'carol_hero_photo_v8';
 const STORAGE_CART_KEY = 'carol_quote_cart_v7';
 const STORAGE_SUPABASE_CONFIG_KEY = 'carol_supabase_config_v1';
 
@@ -20,7 +20,7 @@ const ADMIN_PASSWORD = 'carol2026';
 const FIXED_SUPABASE_URL = '';
 const FIXED_SUPABASE_ANON_KEY = '';
 
-const DEFAULT_HERO_IMAGE = 'assets/images/cacarola-esmaltada-real.jpg';
+const DEFAULT_HERO_IMAGE = 'cacarola-esmaltada-real.jpg';
 
 const DEFAULT_PRODUCTS = [
   {
@@ -31,7 +31,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Fabricação Própria',
     badgeType: 'fab',
     featured: true,
-    image: 'assets/images/pipoqueira-usinada-color-24.jpg',
+    image: 'pipoqueira-usinada-color-24.jpg',
     description: 'Pipoqueira em alumínio usinado de alta espessura com manivela anatômica, giro suave e pintura eletrostática resistente.',
     colors: ['#C8281E', '#1C1C1C', '#C0C0C0'],
     specs: ['Nº 24', 'Manivela Reforçada', 'Alumínio Grosso', 'Fabricação Própria']
@@ -44,7 +44,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Ferro Esmaltado',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/cacarola-esmaltada-real.jpg',
+    image: 'cacarola-esmaltada-real.jpg',
     description: 'Charmosa, eficiente e econômica. Retém o calor por muito mais tempo, conta com pomel em aço inox maciço e vai direto do fogão para a mesa.',
     colors: ['#C8281E', '#E85C1C', '#1C1C1C'],
     specs: ['Ferro Fundido Esmaltado', 'Pomel Inox Maciço', 'Retenção Térmica Alta', 'Atacado & Varejo']
@@ -57,7 +57,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Fabricação Própria',
     badgeType: 'fab',
     featured: true,
-    image: 'assets/images/cacarola-aluminio-turquesa-real.jpg',
+    image: 'cacarola-aluminio-turquesa-real.jpg',
     description: 'Acabamento craquelado turquesa exclusivo, alças em baquelite antitérmico e excelente durabilidade para uso diário.',
     colors: ['#1AA3B8', '#C8281E', '#2B2B2B'],
     specs: ['Alumínio Grosso', 'Baquelite Antitérmico', 'Cores Exclusivas', 'Fabricação Própria']
@@ -70,7 +70,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Destaque de Vendas',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/cacarola-laranja-degrade-real.jpg',
+    image: 'cacarola-laranja-degrade-real.jpg',
     description: 'Acabamento vítreo nobre em degradê laranja e vermelho. Design clássico com robustez comprovada.',
     colors: ['#E85C1C', '#C8281E', '#F2A922'],
     specs: ['Acabamento Vítreo', 'Pomel Inox Maciço', 'Alças Anatômicas', 'Fácil Limpeza']
@@ -83,7 +83,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Mais Vendida',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/churrasqueira-de-carrinho.jpg',
+    image: 'churrasqueira-de-carrinho.jpg',
     description: 'Churrasqueira metálica de carrinho com rodas de locomoção, tábua lateral de apoio, cabos de madeira e grelha reforçada.',
     colors: ['#1C1C1C'],
     specs: ['Com Rodas', 'Apoio Lateral', 'Grelha Reforçada', 'Cabos de Madeira']
@@ -96,7 +96,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Alumínio Fundido',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/churrasqueira-abafo.jpg',
+    image: 'churrasqueira-abafo.jpg',
     description: 'Conjunto de churrasqueiras a bafo em alumínio fundido grosso. Ideal para carnes suculentas com economia máxima de carvão.',
     colors: ['#C0C0C0'],
     specs: ['Alumínio Fundido Maciço', 'Retém Calor a Bafo', 'Diversos Tamanhos', 'Grelha Inclusa']
@@ -109,7 +109,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Pedra Sabão',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/panela-de-pressao-pedra-sabao.jpg',
+    image: 'panela-de-pressao-pedra-sabao.jpg',
     description: 'Autêntica panela de pressão esculpida em pedra sabão legítima de Minas Gerais com cinta e alças de cobre puro.',
     colors: ['#7A8288', '#B85A28'],
     specs: ['Pedra Sabão Legítima', 'Cobre Puro', 'Mantém o Calor', 'Sabor Mineiro Inigualável']
@@ -122,7 +122,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Cobre Puro',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/cuba-e-torneira-de-cobre.jpg',
+    image: 'cuba-e-torneira-de-cobre.jpg',
     description: 'Cuba redonda martelada à mão e torneira alta em cobre legítimo. Peça artesanal exclusiva para lavabos e áreas gourmet.',
     colors: ['#B85A28'],
     specs: ['100% Cobre Puro', 'Martelado Artesanal', 'Torneira Inclusa', 'Alta Durabilidade']
@@ -135,7 +135,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Ferro & Madeira',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/petisqueira-com-madeira.jpg',
+    image: 'petisqueira-com-madeira.jpg',
     description: 'Chapa petisqueira redonda em ferro fundido com base tábua de madeira maciça. Conserva a temperatura de porções do início ao fim.',
     colors: ['#1C1C1C', '#D4A373'],
     specs: ['Ferro Fundido', 'Tábua de Madeira Torneada', 'Código 7335', 'Uso Comercial & Residencial']
@@ -148,7 +148,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Linha Gourmet',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/moedor-gourmet-eletrico-b05.jpg',
+    image: 'moedor-gourmet-eletrico-b05.jpg',
     description: 'Moedor e picador de carne elétrico de alto rendimento Botini. Ideal para açougues, hamburguerias e cozinhas artesanais.',
     colors: ['#E0E0E0', '#1C1C1C'],
     specs: ['Motor Elétrico B05', 'Bandeja Inox', 'Alta Produtividade', 'Garantia Botini']
@@ -161,7 +161,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Fabricação Própria',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/forma-de-bolo-piscina.jpg',
+    image: 'forma-de-bolo-piscina.jpg',
     description: 'Forma ballerine em alumínio puro com rebaixo central perfeito para calda generosa de bolos piscina.',
     colors: ['#C0C0C0'],
     specs: ['Alumínio Polido', 'Fundo com Rebaixo', 'Desenforme Perfeito', 'Fabricação Própria']
@@ -174,7 +174,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Extra Forte',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/cacarola-reta-extra-forte-hotel.jpg',
+    image: 'cacarola-reta-extra-forte-hotel.jpg',
     description: 'Linha profissional reforçada do Nº 20 ao 60 em alumínio grosso. Especial para restaurantes, cozinhas industriais e buffets.',
     colors: ['#C0C0C0'],
     specs: ['Nº 20 ao 60', 'Espessura Reforçada', 'Alças Arrebites Duplos', 'Linha Hotel']
@@ -187,7 +187,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Multi-Uso',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/cuscuzeiro-multi-uso.jpg',
+    image: 'cuscuzeiro-multi-uso.jpg',
     description: 'Cuscuzeiro inteligente versátil para preparo a vapor, legumes e cuscuz. Acabamento polido ou colorido.',
     colors: ['#C8281E', '#1C1C1C', '#C0C0C0'],
     specs: ['Grelha Interna Vapor', 'Baquelite Antitérmico', 'Rápido Cozimento', 'Fabricação Própria']
@@ -200,7 +200,7 @@ const DEFAULT_PRODUCTS = [
     badge: '3 em 1',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/kit-vapor-3-em-1.jpg',
+    image: 'kit-vapor-3-em-1.jpg',
     description: 'Conjunto completo composto por panela base com tampa, acessório vapor furado e forma pudim/banho-maria.',
     colors: ['#C0C0C0'],
     specs: ['3 Peças Integradas', 'Alumínio de Primeira Linha', 'Tampa com Pomel', 'Fabricação Própria']
@@ -213,7 +213,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Queijo Canastra',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/queijeira.jpg',
+    image: 'queijeira.jpg',
     description: 'Queijeira autêntica para maturação e conservação de queijo Minas e Canastra, com base higiênica e tampa protetora.',
     colors: ['#D4A373', '#FFFFFF'],
     specs: ['Base Especial', 'Tampa Protetora', 'Ideal para Queijo Minas', 'Tradição Artesanal']
@@ -226,7 +226,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Antiaderente',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/frita-ovo-antiaderente.jpg',
+    image: 'frita-ovo-antiaderente.jpg',
     description: 'Frigideira individual compacta com revestimento antiaderente premium. Ovos fritos sem grudar com mínimo de óleo.',
     colors: ['#1C1C1C', '#C8281E'],
     specs: ['Antiaderente', 'Cabo Baquelite Seguro', 'Tamanho Perfeito', 'Fabricação Própria']
@@ -239,7 +239,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Kit Completo',
     badgeType: 'fab',
     featured: true,
-    image: 'assets/images/jogo-cacarola-antiaderente.jpg',
+    image: 'jogo-cacarola-antiaderente.jpg',
     description: 'Jogo completo de caçarolas com revestimento interno e externo antiaderente de alta performance.',
     colors: ['#1C1C1C', '#C8281E', '#1AA3B8'],
     specs: ['5 Caçarolas', 'Tampas Inclusas', 'Antiaderente', 'Fabricação Própria']
@@ -252,7 +252,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Uso Comercial',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/ralador-de-coco-e-queijo.jpg',
+    image: 'ralador-de-coco-e-queijo.jpg',
     description: 'Ralador rotativo manual de mesa para coco e queijo. Fixação por morsa com tambor cortante em aço.',
     colors: ['#E0E0E0', '#1C1C1C'],
     specs: ['Fixação por Morsa', 'Tambor Aço Inox', 'Rápido e Preciso', 'Durabilidade Extrema']
@@ -265,7 +265,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Térmico',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/porta-litrao-bar-time.jpg',
+    image: 'porta-litrao-bar-time.jpg',
     description: 'Porta garrafa térmico para cerveja litrão (1.000ml) em alumínio com isolamento térmico e estampas personalizadas.',
     colors: ['#C0C0C0', '#1C1C1C', '#C8281E'],
     specs: ['Capacidade 1 Litro', 'Isolamento Térmico', 'Alumínio de Alta Resistência', 'Várias Cores']
@@ -278,7 +278,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Artesanato Mineiro',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/placa-decorativa-com-canecas.jpg',
+    image: 'placa-decorativa-com-canecas.jpg',
     description: 'Porta canecas em madeira de demolição rústica acompanhado de 5 canecas esmaltadas vintage coloridas.',
     colors: ['#8C4326', '#E85C1C'],
     specs: ['Madeira Maciça', '5 Canecas Esmaltadas', 'Ganchos Reforçados', 'Decoração de Fazenda']
@@ -291,7 +291,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Peça Decorativa',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/cristaleira-mini-com-chaleira.jpg',
+    image: 'cristaleira-mini-com-chaleira.jpg',
     description: 'Charmosa mini cristaleira em madeira artesanal com chaleirinha esmaltada em miniatura para bancadas e cantinhos do café.',
     colors: ['#8C4326', '#C8281E'],
     specs: ['Madeira Artesanal', 'Mini Chaleira Esmaltada', 'Cantinho do Café', 'Excelente Presente']
@@ -304,7 +304,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Aço Galvanizado',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/ralador-galvanizado.jpg',
+    image: 'ralador-galvanizado.jpg',
     description: 'Tradicional ralador mineiro em chapa galvanizada furada com cabo ergonômico de madeira.',
     colors: ['#C0C0C0'],
     specs: ['Chapa Galvanizada', 'Cabo Madeira', 'Furos Precisos', 'Cozinha Tradicional']
@@ -317,7 +317,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Ferro Estanhado',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/picador-de-carne-03.jpg',
+    image: 'picador-de-carne-03.jpg',
     description: 'Moedor de carne manual Nº 03 em ferro fundido estanhado. Acompanha navalha e disco cortante para carnes e massas.',
     colors: ['#D6D6D6'],
     specs: ['Nº 03 Compacto', 'Ferro Estanhado', 'Morsa de Bancada', 'Durabilidade Eterna']
@@ -330,7 +330,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Original Botini',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/moinho-de-cafe.jpg',
+    image: 'moinho-de-cafe.jpg',
     description: 'Moinho manual para moer grãos de café na hora. Regulagem de moagem fina ou grossa com estrutura maciça.',
     colors: ['#C8281E', '#1C1C1C'],
     specs: ['Ferro Fundido', 'Regulagem de Moagem', 'Fixação em Parede/Mesa', 'Tradição do Café']
@@ -343,7 +343,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Robusto',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/picador-de-carne-10.jpg',
+    image: 'picador-de-carne-10.jpg',
     description: 'Modelo tamanho 10 para moagem rápida de carnes, linguiças e biscoitos. Maior boca de alimentação e rendimento.',
     colors: ['#D6D6D6'],
     specs: ['Nº 10 Grande', 'Boca Larga', 'Para Açougues & Casas', 'Ferro Fundido Estanhado']
@@ -356,7 +356,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Aço Arado Genuíno',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/chapa-de-arado.jpg',
+    image: 'chapa-de-arado.jpg',
     description: 'Legítimo disco de arado em aço maciço com alças anatômicas. O preferido para costela, tropeiro e churrasco de chão.',
     colors: ['#1C1C1C'],
     specs: ['Aço Carbono Maciço', 'Alças Soldadas', 'Uso Fogão a Lenha & Gás', 'Tradição do Interior']
@@ -369,7 +369,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Café da Fazenda',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/kit-bule-mini-com-bandeja.jpg',
+    image: 'kit-bule-mini-com-bandeja.jpg',
     description: 'Suporte aramado ou de madeira com bule de café esmaltado e xícaras para servir com charme afetuoso.',
     colors: ['#C8281E', '#1C1C1C', '#F2A922'],
     specs: ['Bule Esmaltado', 'Suporte Inclusivo', 'Xícaras Retrô', 'Decoração & Uso']
@@ -382,7 +382,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Barro Natural',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/linha-de-barro.jpg',
+    image: 'linha-de-barro.jpg',
     description: 'Panelas e caçarolas de barro legítimas curadas com resina natural. Perfeitas para feijão gordo, moquecas e peixadas.',
     colors: ['#1C1C1C', '#8C4326'],
     specs: ['Barro Genuíno', 'Cura Tradicional', 'Retenção Prolongada de Calor', 'Fogão a Lenha & Gás']
@@ -395,7 +395,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Rechaud Gourmet',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/rechaud.jpg',
+    image: 'rechaud.jpg',
     description: 'Rechaud de mesa em ferro fundido com chapa estriada ou lisa e réchaud queimador a álcool gel.',
     colors: ['#1C1C1C'],
     specs: ['Ferro Fundido', 'Queimador Regulável', 'Mantém Carnes Fervendo na Mesa', 'Uso em Bares & Casas']
@@ -408,7 +408,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Acessório Gourmet',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/kit-molheira.jpg',
+    image: 'kit-molheira.jpg',
     description: 'Kit de molheiras com tigelas e suporte ergonômico para servir molhos, patês e temperos à mesa.',
     colors: ['#FFFFFF', '#1C1C1C'],
     specs: ['Potes Removíveis', 'Suporte Firme', 'Fácil Lavagem', 'Mesa Sofisticada']
@@ -421,7 +421,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Fabricação Própria',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/forma-de-pizza-com-faca.jpg',
+    image: 'forma-de-pizza-com-faca.jpg',
     description: 'Forma redonda para pizza em alumínio resistente com borda vincada e cortador carretilha profissional.',
     colors: ['#C0C0C0'],
     specs: ['Alumínio de Alta Condução', 'Bordas Dobradas', 'Cortador Incluso', 'Fabricação Própria']
@@ -434,7 +434,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Fabricação Própria',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/forma-com-alca.jpg',
+    image: 'forma-com-alca.jpg',
     description: 'Assadeira alta em alumínio reforçado com alças laterais que facilitam a retirada segura do forno.',
     colors: ['#C0C0C0'],
     specs: ['Alumínio Grosso', 'Alças Anatômicas', 'Carnes e Assados', 'Fabricação Própria']
@@ -447,7 +447,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Jogo 8 Peças',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/jogo-agua-moringa-copos.jpg',
+    image: 'jogo-agua-moringa-copos.jpg',
     description: 'Clássico conjunto de moringa de água com tampa, 6 copos altos e bandeja redonda em alumínio pintado.',
     colors: ['#1AA3B8', '#C8281E', '#F2A922'],
     specs: ['01 Moringa 02', '06 Copos Retos', '01 Bandeja Nº 30', 'Conserva Água Fresca']
@@ -460,7 +460,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Peça de Época',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/velador-mini-com-chaleira.jpg',
+    image: 'velador-mini-com-chaleira.jpg',
     description: 'Velador rústico em ferro trabalhado para manter pequenos bules aquecidos com charme de fazenda.',
     colors: ['#1C1C1C', '#C8281E'],
     specs: ['Ferro Trabalhado', 'Chaleira Inclusa', 'Iluminação Suave & Calor', 'Peça Colecionável']
@@ -473,7 +473,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Alta Resistência',
     badgeType: 'default',
     featured: false,
-    image: 'assets/images/escorredor-prato-tubular.jpg',
+    image: 'escorredor-prato-tubular.jpg',
     description: 'Escorredor robusto em tubos de alumínio que não enferruja. Espaço para pratos, talheres e copos.',
     colors: ['#C0C0C0', '#1C1C1C'],
     specs: ['Não Enferruja', 'Porta Copos Integrado', 'Capacidade Elevada', 'Excelente Estabilidade']
@@ -486,7 +486,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Brinquedo Clássico',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/kit-infantil-aluminio.jpg',
+    image: 'kit-infantil-aluminio.jpg',
     description: 'Mini panelinhas em alumínio de verdade para brincar de casinha. O clássico brinquedo artesanal da infância mineira.',
     colors: ['#C0C0C0', '#C8281E'],
     specs: ['Alumínio Autêntico', 'Mini Caçarolas e Frigideiras', 'Seguro & Durável', 'Fabricação Própria']
@@ -499,7 +499,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Kit Pipoca',
     badgeType: 'fab',
     featured: true,
-    image: 'assets/images/kit-pipoca-completo.jpg',
+    image: 'kit-pipoca-completo.jpg',
     description: 'O combo mais querido: Pipoqueira de manivela Nº 20, pote porta-milho temático e 6 baldes individuais de pipoca.',
     colors: ['#C8281E', '#F2A922'],
     specs: ['Pipoqueira Nº 20', 'Porta Milho Hermético', '6 Potes Individuais', 'Fabricação Própria']
@@ -512,7 +512,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Alumínio Grosso',
     badgeType: 'fab',
     featured: true,
-    image: 'assets/images/jogo-cacarola-fundida-16-24.jpg',
+    image: 'jogo-cacarola-fundida-16-24.jpg',
     description: 'Jogo com 5 caçarolas de espessura grossa (3 a 4mm) do Nº 16 ao 24 com tampas pesadas e alças inteiriças.',
     colors: ['#C0C0C0'],
     specs: ['Nº 16 ao 24', 'Alumínio Grosso Maciço', 'Alças Fundidas', 'Panela para a Vida Toda']
@@ -525,7 +525,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Cozimento Rápido',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/forma-meia-pressao.jpg',
+    image: 'forma-meia-pressao.jpg',
     description: 'Forma de pudim hermética de meia pressão que assa pudins no fogão em menos de 25 minutos com economia de gás.',
     colors: ['#C0C0C0'],
     specs: ['Tampa Hermética com Travas', 'Economia de Gás', 'Pudim Perfeito', 'Fabricação Própria']
@@ -538,7 +538,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Atacado & Varejo',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/forma-de-empada.jpg',
+    image: 'forma-de-empada.jpg',
     description: 'Kit de forminhas caneladas em alumínio puro com bordas arredondadas para empadas, empadões e tarteletes.',
     colors: ['#C0C0C0'],
     specs: ['Borda Canelada', 'Diversos Diâmetros', 'Pacotes Atacado', 'Fabricação Própria']
@@ -551,7 +551,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Cobre Puro',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/pecas-de-cobre.jpg',
+    image: 'pecas-de-cobre.jpg',
     description: 'Tachos para doce de leite, panelas e chaleiras marteladas em cobre puro maciço. O sabor inigualável dos doces de Minas.',
     colors: ['#B85A28'],
     specs: ['Cobre Legítimo Maciço', 'Martelado à Mão', 'Alças em Bronze/Latão', 'Doces Perfeitos']
@@ -564,7 +564,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Anti-Vazamento',
     badgeType: 'fab',
     featured: false,
-    image: 'assets/images/fervedor-inderramavel.jpg',
+    image: 'fervedor-inderramavel.jpg',
     description: 'Fervedor com aba afunilada interna e tampa especial que impede o leite de transbordar ou derramar sobre o fogão.',
     colors: ['#C0C0C0', '#C8281E'],
     specs: ['Não Derrama o Leite', 'Cabo Baquelite Longo', 'Alumínio de Qualidade', 'Fabricação Própria']
@@ -577,7 +577,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Mais Vendido',
     badgeType: 'fab',
     featured: true,
-    image: 'assets/images/jogo-cacarola-color-16-24.jpg',
+    image: 'jogo-cacarola-color-16-24.jpg',
     description: 'Jogo completo com 5 caçarolas do Nº 16 ao 24 com pintura craquelada e esmaltada de alto brilho e alças em baquelite.',
     colors: ['#C8281E', '#1AA3B8', '#1C1C1C', '#E85C1C'],
     specs: ['5 Panelas (16 ao 24)', 'Pintura Eletrostática', 'Baquelite Antitérmico', 'Fabricação Própria']
@@ -590,7 +590,7 @@ const DEFAULT_PRODUCTS = [
     badge: 'Selo INMETRO',
     badgeType: 'default',
     featured: true,
-    image: 'assets/images/panela-pressao-new-line-red.jpg',
+    image: 'panela-pressao-new-line-red.jpg',
     description: 'Panela de pressão moderna de 5,0 litros com pintura vermelha metálica, múltiplas válvulas de segurança e trava na tampa.',
     colors: ['#C8281E', '#1C1C1C'],
     specs: ['Capacidade 5,0L', 'Válvula Dupla de Segurança', 'Cabo com Trava', 'Certificada INMETRO']
@@ -843,6 +843,18 @@ function saveCart() {
    RENDERIZAÇÃO DA VITRINE & CATÁLOGO (SEM ÍCONES DE WHATSAPP REPETIDOS)
    ========================================================================== */
 
+window.handleImageFallback = function(img) {
+  if (!img || img.dataset.hasFailed) return;
+  img.dataset.hasFailed = 'true';
+  const currentSrc = img.getAttribute('src') || '';
+  const cleanName = currentSrc.split('/').pop().split('?')[0];
+  if (currentSrc.includes('assets/images/')) {
+    img.src = cleanName;
+  } else {
+    img.src = 'assets/images/' + cleanName;
+  }
+};
+
 function renderShowcase() {
   const showcaseGrid = document.getElementById('showcaseGrid');
   if (!showcaseGrid) return;
@@ -863,7 +875,7 @@ function renderShowcase() {
       <article class="showcase-card">
         <div class="showcase-media">
           ${adminOverlay}
-          <img src="${product.image}" alt="${product.name}" loading="lazy" />
+          <img src="${product.image}" alt="${product.name}" onerror="handleImageFallback(this)" loading="lazy" />
           <span class="showcase-badge ${product.badgeType === 'fab' ? 'badge-copper' : ''}">${product.badge}</span>
         </div>
         <div class="showcase-body">
@@ -923,7 +935,7 @@ function renderProducts() {
       <article class="product-card" data-category="${product.category}">
         <div class="product-thumb">
           ${adminOverlay}
-          <img src="${product.image}" alt="${product.name}" loading="lazy" />
+          <img src="${product.image}" alt="${product.name}" onerror="handleImageFallback(this)" loading="lazy" />
           <span class="product-tag ${product.badgeType === 'fab' ? 'tag-fab' : ''}">${product.badge}</span>
         </div>
         <div class="product-body">
@@ -1213,7 +1225,7 @@ window.resetProductForm = function() {
   document.getElementById('adminProductImageUrl').value = '';
   pendingAdminImageDataUrl = '';
   const preview = document.getElementById('adminPhotoPreview');
-  if (preview) preview.src = 'assets/images/cacarola-esmaltada.png';
+  if (preview) preview.src = 'cacarola-esmaltada.png';
   document.getElementById('adminFormTitle').textContent = 'Adicionar Novo Modelo de Panela / Produto';
 };
 
@@ -1253,7 +1265,7 @@ window.saveAdminProduct = async function(event) {
   const description = document.getElementById('adminProductDesc').value.trim();
   const imageUrlInput = document.getElementById('adminProductImageUrl').value.trim();
 
-  const finalImage = pendingAdminImageDataUrl || imageUrlInput || 'assets/images/cacarola-esmaltada.png';
+  const finalImage = pendingAdminImageDataUrl || imageUrlInput || 'cacarola-esmaltada.png';
   const specs = specsRaw.split(',').map(s => s.trim()).filter(Boolean);
 
   let savedItem = null;
