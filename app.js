@@ -11,6 +11,10 @@ const STORAGE_HERO_KEY = 'carol_hero_photo_v4';
 const STORAGE_CART_KEY = 'carol_quote_cart_v4';
 const STORAGE_SUPABASE_CONFIG_KEY = 'carol_supabase_config_v1';
 
+// Credenciais de Acesso Administrativo (Login e Senha)
+const VALID_ADMIN_LOGINS = ['carol', 'admin', 'caroldistribuidora'];
+const ADMIN_PASSWORD = 'carol2026';
+
 // Caso queira deixar as credenciais do Supabase fixas no código para todos os dispositivos,
 // basta preencher abaixo ou configurar diretamente na aba "Banco na Nuvem" do Painel ADM:
 const FIXED_SUPABASE_URL = '';
@@ -593,12 +597,64 @@ function compressImageFile(file, callback) {
   reader.readAsDataURL(file);
 }
 
-window.openAdminModal = function() {
-  isAdminUnlocked = true;
+function updateAdminAuthUI() {
+  const loginScreen = document.getElementById('adminLoginScreen');
+  const panelContent = document.getElementById('adminPanelContent');
+  const logoutBtn = document.getElementById('adminLogoutBtn');
+  const cloudBadge = document.getElementById('cloudStatusBadge');
+
+  if (isAdminUnlocked) {
+    if (loginScreen) loginScreen.style.display = 'none';
+    if (panelContent) panelContent.style.display = 'block';
+    if (logoutBtn) logoutBtn.style.display = 'inline-flex';
+    if (cloudBadge) cloudBadge.style.display = 'inline-flex';
+  } else {
+    if (loginScreen) loginScreen.style.display = 'block';
+    if (panelContent) panelContent.style.display = 'none';
+    if (logoutBtn) logoutBtn.style.display = 'none';
+    if (cloudBadge) cloudBadge.style.display = 'none';
+  }
+}
+
+window.handleAdminLogin = function(event) {
+  event.preventDefault();
+  const userField = document.getElementById('adminLoginUser');
+  const passField = document.getElementById('adminLoginPass');
+  const errorMsg = document.getElementById('adminLoginError');
+
+  const enteredUser = (userField ? userField.value : '').trim().toLowerCase();
+  const enteredPass = (passField ? passField.value : '').trim();
+
+  if (VALID_ADMIN_LOGINS.includes(enteredUser) && enteredPass === ADMIN_PASSWORD) {
+    isAdminUnlocked = true;
+    if (errorMsg) errorMsg.style.display = 'none';
+    if (passField) passField.value = '';
+    updateAdminAuthUI();
+    renderShowcase();
+    renderProducts();
+    renderAdminProductsList();
+    updateCloudBadgeUI();
+  } else {
+    if (errorMsg) errorMsg.style.display = 'block';
+  }
+};
+
+window.logoutAdmin = function() {
+  isAdminUnlocked = false;
+  updateAdminAuthUI();
   renderShowcase();
   renderProducts();
-  renderAdminProductsList();
-  updateCloudBadgeUI();
+  closeAdminModal();
+};
+
+window.openAdminModal = function() {
+  updateAdminAuthUI();
+  if (isAdminUnlocked) {
+    renderShowcase();
+    renderProducts();
+    renderAdminProductsList();
+    updateCloudBadgeUI();
+  }
 
   const cfg = getSupabaseConfig();
   const urlInput = document.getElementById('supabaseUrlInput');

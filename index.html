@@ -413,13 +413,53 @@
     <div class="admin-modal">
       <div class="admin-modal-header">
         <h3>
-          <span>Painel ADM • Carol Distribuidora</span>
-          <span class="cloud-status-badge" id="cloudStatusBadge">💾 Modo Local</span>
+          <span>🔒 Área Restrita • Carol Distribuidora</span>
+          <span class="cloud-status-badge" id="cloudStatusBadge" style="display: none;">💾 Modo Local</span>
         </h3>
-        <button type="button" class="drawer-close" style="color:#FFF;" onclick="closeAdminModal()">✕</button>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <button type="button" id="adminLogoutBtn" onclick="logoutAdmin()" style="display: none; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28); color: #FFF; padding: 5px 12px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; cursor: pointer;">
+            Sair / Bloquear
+          </button>
+          <button type="button" class="drawer-close" style="color:#FFF;" onclick="closeAdminModal()">✕</button>
+        </div>
       </div>
 
       <div class="admin-modal-body">
+        <!-- TELA DE LOGIN E SENHA -->
+        <div id="adminLoginScreen" style="max-width: 380px; margin: 18px auto; text-align: center; padding: 10px;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(168, 74, 36, 0.12); color: var(--color-brand-copper); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 6px; color: var(--text-primary);">
+            Acesso Administrativo
+          </h4>
+          <p style="font-size: 0.86rem; color: var(--text-secondary); margin-bottom: 18px;">
+            Digite o login e a senha da loja para gerenciar fotos e modelos do catálogo.
+          </p>
+
+          <form onsubmit="handleAdminLogin(event)" style="display: flex; flex-direction: column; gap: 12px; text-align: left;">
+            <div class="admin-form-group">
+              <label for="adminLoginUser">Usuário / Login</label>
+              <input type="text" id="adminLoginUser" placeholder="Digite seu login" required autocomplete="username" />
+            </div>
+            <div class="admin-form-group">
+              <label for="adminLoginPass">Senha</label>
+              <input type="password" id="adminLoginPass" placeholder="Digite sua senha" required autocomplete="current-password" />
+            </div>
+            <p id="adminLoginError" style="display: none; color: #B8332A; font-size: 0.82rem; font-weight: 600; text-align: center; margin: 2px 0;">
+              Usuário ou senha incorretos. Tente novamente.
+            </p>
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 4px;">
+              Entrar no Painel ADM
+            </button>
+          </form>
+        </div>
+
+        <!-- CONTEÚDO DO PAINEL (Só aparece após Login e Senha) -->
+        <div id="adminPanelContent" style="display: none;">
         <div class="admin-tabs">
           <button type="button" class="admin-tab-btn active" data-tab="form" onclick="switchAdminTab('form'); resetProductForm();">
             + Adicionar / Editar Modelo
@@ -570,6 +610,7 @@
           <p style="font-size: 0.8rem; color: var(--text-muted);">
             <strong>Como criar em 2 minutos:</strong> Crie um projeto gratuito em <code>supabase.com</code>, abra o menu <em>SQL Editor</em>, cole o conteúdo do arquivo <code>supabase-setup.sql</code> (que está na pasta do projeto) e clique em <em>Run</em>. Depois copie a URL e a Anon Key em <em>Project Settings &gt; API</em> e cole acima!
           </p>
+        </div>
         </div>
 
       </div>
