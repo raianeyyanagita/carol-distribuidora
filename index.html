@@ -118,7 +118,7 @@
 
       <div class="hero-media-wrap">
         <div class="hero-media-card">
-          <img id="heroMainImage" src="assets/images/hero-rustico-mineiro.png" alt="Ambiente acolhedor com caçarolas de ferro esmaltado e alumínio da Carol Distribuidora" />
+          <img id="heroMainImage" src="assets/images/cacarola-esmaltada-real.jpg" alt="Ambiente acolhedor com caçarola da Carol Distribuidora" />
         </div>
 
         <div class="hero-floating-seal">
@@ -183,10 +183,11 @@
       <div class="catalog-toolbar">
         <div class="filter-list">
           <button type="button" class="filter-tab active" data-filter="todos">Todos os Produtos</button>
+          <button type="button" class="filter-tab" data-filter="aluminio">Alumínio & Formas</button>
           <button type="button" class="filter-tab" data-filter="esmaltadas">Esmaltadas</button>
-          <button type="button" class="filter-tab" data-filter="aluminio">Alumínio</button>
           <button type="button" class="filter-tab" data-filter="ferro-barro">Ferro, Barro & Cobre</button>
-          <button type="button" class="filter-tab" data-filter="fundicao">Suprimentos de Fundição</button>
+          <button type="button" class="filter-tab" data-filter="utilidades">Churrasqueiras & Utilidades</button>
+          <button type="button" class="filter-tab" data-filter="fundicao">Moedores & Máquinas</button>
         </div>
 
         <div class="search-box">
@@ -487,7 +488,7 @@
             <div class="admin-form-group full">
               <label>Foto do Produto (Escolha da Galeria do Celular ou Computador)</label>
               <div class="admin-photo-preview-wrap">
-                <img id="adminPhotoPreview" src="assets/images/cacarola-esmaltada.png" alt="Preview" class="admin-photo-preview" />
+                <img id="adminPhotoPreview" src="assets/images/cacarola-esmaltada-real.jpg" alt="Preview" class="admin-photo-preview" />
                 <div style="flex: 1;">
                   <input type="file" id="adminProductPhotoFile" accept="image/*" style="width: 100%; margin-bottom: 6px;" />
                   <input type="text" id="adminProductImageUrl" placeholder="Ou cole o link de uma foto (opcional)" style="width: 100%;" />
@@ -503,10 +504,11 @@
             <div class="admin-form-group">
               <label>Categoria no Catálogo *</label>
               <select id="adminProductCategory">
+                <option value="aluminio">Alumínio & Formas</option>
                 <option value="esmaltadas">Esmaltadas</option>
-                <option value="aluminio">Alumínio</option>
                 <option value="ferro-barro">Ferro, Barro & Cobre</option>
-                <option value="fundicao">Suprimentos de Fundição</option>
+                <option value="utilidades">Churrasqueiras & Utilidades</option>
+                <option value="fundicao">Moedores & Máquinas</option>
               </select>
             </div>
 
